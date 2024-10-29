@@ -121,11 +121,6 @@ import {
   
         // send audio to whisper API for transcription
         // const transcript = await sendAudioToWhisper(uri!);
-        ExpoSpeechRecognitionModule.start(transcriptionOptions);
-        useSpeechRecognitionEvent("result", (event) => {
-        setTranscription(event.results[0]?.transcript || "What's your name?");
-        setText(transcription);
-        });
         console.log("success");
         console.log("Transcript:", transcription);
         console.log("URI:", uri);
